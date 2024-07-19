@@ -15,17 +15,23 @@ public class HighArrayApp {
         arr.insert(66);
         arr.insert(33);
 
-        arr.display();
+        // arr.display();
 
-        int searchKey = 35; // search for item
-        if (arr.find(searchKey))
-            System.out.println("Found " + searchKey);
-        else
-            System.out.println("Can't find " + searchKey);
+        // int searchKey = 35; // search for item
+        // if (arr.find(searchKey))
+        //     System.out.println("Found " + searchKey);
+        // else
+        //     System.out.println("Can't find " + searchKey);
 
-        arr.delete(00); 
-        arr.delete(55);
-        arr.delete(99);
-        arr.display();
+        // arr.delete(00); 
+        // arr.delete(55);
+        // arr.delete(99);
+        
+        // arr.display();
+        
+        System.out.println(arr.getmax());
+        arr.removeMax();
+        System.out.println(arr.getmax());
+
     }
 }

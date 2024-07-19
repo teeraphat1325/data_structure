@@ -25,16 +25,15 @@ public class HighArray {
 
     public boolean delete(long value) {
         int j;
-        for (j = 0; j < nElems; j++) 
+        for (j = 0; j < nElems; j++)
             if (value == a[j])
                 break;
-        if (j == nElems) 
+        if (j == nElems)
             return false;
-        else 
-        {
-            for (int k = j; k < nElems; k++) 
+        else {
+            for (int k = j; k < nElems; k++)
                 a[k] = a[k + 1];
-            nElems--; 
+            nElems--;
             return true;
         }
     }
@@ -43,5 +42,26 @@ public class HighArray {
         for (int j = 0; j < nElems; j++)
             System.out.println(a[j] + " ");
         System.out.println("");
+    }
+
+    public long getmax() {
+        long m = 0;
+        for (int j = 0; j < nElems; j++) {
+            if (a[j] > m) {
+                m = a[j];
+            }
+        }
+        return m;
+    }
+
+    public void removeMax() {
+        long MMax = getmax();
+        int j;
+        for (j = 0; j < nElems; j++)
+            if (MMax == a[j])
+                break;
+        for (int k = j; k < nElems; k++)
+            a[k] = a[k + 1];
+        nElems--;
     }
 }
